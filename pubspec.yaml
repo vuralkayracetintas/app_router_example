@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   auto_route: ^9.2.2
   build_runner: ^2.4.13
+  get_it: ^8.0.0
 
 dev_dependencies:
   flutter_test:
