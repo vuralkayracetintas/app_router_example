@@ -10,6 +10,25 @@
 part of 'app_router.dart';
 
 /// generated route for
+/// [DemoView]
+class DemoRoute extends PageRouteInfo<void> {
+  const DemoRoute({List<PageRouteInfo>? children})
+      : super(
+          DemoRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'DemoRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const DemoView();
+    },
+  );
+}
+
+/// generated route for
 /// [HomeView]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
@@ -30,17 +49,10 @@ class HomeRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [SettingPage]
-class SettingRoute extends PageRouteInfo<SettingRouteArgs> {
-  SettingRoute({
-    required String title,
-    Key? key,
-    List<PageRouteInfo>? children,
-  }) : super(
+class SettingRoute extends PageRouteInfo<void> {
+  const SettingRoute({List<PageRouteInfo>? children})
+      : super(
           SettingRoute.name,
-          args: SettingRouteArgs(
-            title: title,
-            key: key,
-          ),
           initialChildren: children,
         );
 
@@ -49,27 +61,26 @@ class SettingRoute extends PageRouteInfo<SettingRouteArgs> {
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      final args = data.argsAs<SettingRouteArgs>();
-      return SettingPage(
-        title: args.title,
-        key: args.key,
-      );
+      return const SettingPage();
     },
   );
 }
 
-class SettingRouteArgs {
-  const SettingRouteArgs({
-    required this.title,
-    this.key,
-  });
+/// generated route for
+/// [TestView]
+class TestRoute extends PageRouteInfo<void> {
+  const TestRoute({List<PageRouteInfo>? children})
+      : super(
+          TestRoute.name,
+          initialChildren: children,
+        );
 
-  final String title;
+  static const String name = 'TestRoute';
 
-  final Key? key;
-
-  @override
-  String toString() {
-    return 'SettingRouteArgs{title: $title, key: $key}';
-  }
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const TestView();
+    },
+  );
 }
